@@ -5,6 +5,18 @@ const assertEqual = function(actual, expected) {
     console.log("🛑🛑🛑 " + `Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+
+const eqArrays = function(oneArr, twoArr){
+  
+  let a = oneArr;
+  let b = twoArr;
+ 
+   for( let i = 0; i < a.length; i++) {
+      if( a[i] !== b[i]) {
+       return false 
+       } 
+   
+   }
+   return true 
+ }
+

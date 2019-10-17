@@ -19,23 +19,26 @@ if (eqArrays(actual, expected)) {
       console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
     }
   };
- 
 
-const without = function (source, itemsToRemove) {
-// source array and a itemsToRemove array.
-let bob = itemsToRemove;
-  let result = [];
-  for(let key in source) {
-  if(source[key] !== bob[key]) {
-   result.push(source[key]);
-  } else {
+const flatten = function(array) {
+
+    let newArr = [];
     
+    array && array.forEach(a => {
+      if (a instanceof Array) {
+        newArr = newArr.concat(flatten(a));
+      } else {
+        newArr.splice(newArr.length, 0, a);
+      }
+    });
+    console.log(newArr);
+    return newArr;
   }
-  }
-console.log(result);
-}
-       
-// test code:
+  
+    
 
-without([1, 2, 3], [1])  // => [2, 3];
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+
+
+
+// test code:
+flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
