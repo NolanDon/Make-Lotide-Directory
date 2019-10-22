@@ -1,0 +1,1 @@
+assertEqual(countLetters("lighthouse in the house"), true);

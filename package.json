@@ -1,0 +1,31 @@
+{
+  "name": "@nolan295/lotide",
+  "version": "1.0.1",
+  "description": "Lotide Project",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "emojis-list": "^3.0.0",
+    "chai": "^4.2.0",
+    "node-emoji": "^1.10.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NolanDon/Make-Lotide-Directory.git"
+  },
+  "author": "Nolan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NolanDon/Make-Lotide-Directory/issues"
+  },
+  "homepage": "https://github.com/NolanDon/Make-Lotide-Directory#readme"
+}
+

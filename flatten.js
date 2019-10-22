@@ -1,24 +1,12 @@
-const eqArrays = function(a, b){
-  
-  if(a.length !== b.length) {
-   return false }
-     for ( let i = 0; i < a.length; i++) {
-        if( a[i] !== b[i]) {
-         return false 
-         } 
-     
-     }
-     return true 
-   }
-  
 const assertArraysEqual = function(actual, expected) {
-    
-if (eqArrays(actual, expected)) {
-      console.log(`✅✅✅ Assertion Passed: "${actual}" === "${expected}"`);
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
+      console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`); 
     } else {
-      console.log(`🛑🛑🛑 Assertion Failed: "${actual}" !== "${expected}"`);
+      console.log(`✅✅✅ Assertion Passed: "${actual}" === "${expected}"`);
     }
-  };
+  }
+};
 
 const flatten = function(array) {
 
@@ -31,14 +19,11 @@ const flatten = function(array) {
         newArr.splice(newArr.length, 0, a);
       }
     });
-    console.log(newArr);
-    return newArr;
-  }
-  
     
+    return newArr;
+  } 
+
+  module.exports = flatten;
 
 
 
-
-// test code:
-flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
